@@ -100,10 +100,8 @@ export default {
     });
     $(`#t_${this.data.id}`).on("shown.bs.collapse", () => {
       console.log("show" + this.data.id);
-      console.warn("mounted resize " + this.data.id);
       var w = $("#wrap_" + this.data.id).width();
       $(`#wrap_${this.data.id} iframe`).css("transform", `scale(${w / 460})`);
-      console.warn("mounted resize scale" + w / 460);
     });
   },
   methods: {
